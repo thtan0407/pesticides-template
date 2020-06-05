@@ -212,7 +212,23 @@ img, iframe {
     padding-left: 20px;
 }
 
+#closeMenu {
+    display: none;
+}
+
 @media screen and (max-width: 991px) {
+    #closeMenu {
+        display: block;
+        position: absolute;
+        border-bottom: 0;
+        width: auto;
+        right: 10px;
+        top: 0px;
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: bold;
+        z-index: 2;
+    }
     .wrapper_header {
         top: 0;
     }
@@ -749,7 +765,6 @@ button.style_button {
 .wrapper_background .button_left .style_button {
     margin-top: 2rem;
 }
-
 
 .gallery__inner img {
     width: 100%;

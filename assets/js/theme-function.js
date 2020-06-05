@@ -1,5 +1,7 @@
 $(document).ready(function () {
+    $('#navigation .header_navigation > ul').prepend('<li id="closeMenu">X</li>');
     $('.header_navigation > ul > li.menu-item-has-children > a').append('<i class="flaticon-down-arrow"></i>');
+
 
     $(document).on("click", "#navigation .humburger", function () {
         $('#navigation .header_navigation ul').toggleClass('active_menu');
@@ -20,6 +22,13 @@ $(document).ready(function () {
                 $("#navigation .header_navigation > ul > li > i, .header_navigation > ul > li > svg").next("ul").removeClass("show_iner_menu"),
                 $("#navigation .header_navigation").removeClass("overlay"))
     });
+
+    $(document).on('click', '#closeMenu', function () {
+        $("#navigation .header_navigation ul").removeClass("active_menu");
+        $("#navigation .humburger").removeClass("active_humburger");
+        $("#navigation .header_navigation > ul > li > i, .header_navigation > ul > li > svg").next("ul").removeClass("show_iner_menu");
+        $("#navigation .header_navigation").removeClass("overlay");
+    })
 
 
     jQuery(window).scroll(function () {
